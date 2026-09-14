@@ -170,7 +170,7 @@ def write_results(rows, summary):
                "throughput_ops_per_sec", "p50_latency_us", "p95_latency_us", "p99_latency_us",
                "server_shutdown", "detail"]
     with (RESULTS / "epoll_comparison_raw.csv").open("w", newline="") as stream:
-        writer = csv.DictWriter(stream, fieldnames=columns)
+        writer = csv.DictWriter(stream, fieldnames=columns, lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
     (RESULTS / "epoll_comparison_summary.json").write_text(json.dumps(summary, indent=2) + "\n")

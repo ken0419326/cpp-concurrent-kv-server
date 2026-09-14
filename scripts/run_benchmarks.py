@@ -100,7 +100,7 @@ def main() -> None:
 
     csv_path = RESULTS / "benchmark_raw.csv"
     with csv_path.open("w", newline="") as stream:
-        writer = csv.DictWriter(stream, fieldnames=list(rows[0].keys()))
+        writer = csv.DictWriter(stream, fieldnames=list(rows[0].keys()), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
