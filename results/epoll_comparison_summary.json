@@ -1,0 +1,315 @@
+{
+  "generated_at_utc": "2026-09-14T18:56:14.793980+00:00",
+  "measurement_label": "containerized development measurement",
+  "os": "Linux-6.10.14-linuxkit-aarch64-with-glibc2.36",
+  "cpu": "aarch64",
+  "logical_cpus": 8,
+  "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+  "compiler_flags": "-std=c++17 -O2 -Wall -Wextra -Wpedantic -Werror -pthread",
+  "client_binary": "/work/build/kv_benchmark",
+  "baseline_workers": 8,
+  "requests_per_client": 3000,
+  "repetitions": 5,
+  "workload": [
+    {
+      "clients": 1,
+      "runs": {
+        "baseline": {
+          "complete": true,
+          "statuses": [
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok"
+          ],
+          "errors": 0,
+          "completed_requests": 15000,
+          "median_throughput": 32519.943,
+          "throughput_range": [
+            23410.059,
+            32930.649
+          ],
+          "median_p50_us": 29.291,
+          "median_p95_us": 31.542,
+          "median_p99_us": 34.959
+        },
+        "epoll": {
+          "complete": true,
+          "statuses": [
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok"
+          ],
+          "errors": 0,
+          "completed_requests": 15000,
+          "median_throughput": 31715.812,
+          "throughput_range": [
+            31303.055,
+            31806.602
+          ],
+          "median_p50_us": 30.167,
+          "median_p95_us": 32.833,
+          "median_p99_us": 36.916
+        }
+      },
+      "throughput_improvement_percent": -2.4727318863996706,
+      "p95_latency_reduction_percent": -4.092955424513337
+    },
+    {
+      "clients": 8,
+      "runs": {
+        "baseline": {
+          "complete": true,
+          "statuses": [
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok"
+          ],
+          "errors": 0,
+          "completed_requests": 120000,
+          "median_throughput": 375710.816,
+          "throughput_range": [
+            328106.416,
+            400163.12
+          ],
+          "median_p50_us": 5.583,
+          "median_p95_us": 72.875,
+          "median_p99_us": 140.422
+        },
+        "epoll": {
+          "complete": true,
+          "statuses": [
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok"
+          ],
+          "errors": 0,
+          "completed_requests": 120000,
+          "median_throughput": 130703.767,
+          "throughput_range": [
+            125497.988,
+            136404.971
+          ],
+          "median_p50_us": 47.208,
+          "median_p95_us": 94.125,
+          "median_p99_us": 106.333
+        }
+      },
+      "throughput_improvement_percent": -65.2116038629029,
+      "p95_latency_reduction_percent": -29.15951972555746
+    },
+    {
+      "clients": 64,
+      "runs": {
+        "baseline": {
+          "complete": true,
+          "statuses": [
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok"
+          ],
+          "errors": 0,
+          "completed_requests": 960000,
+          "median_throughput": 140389.387,
+          "throughput_range": [
+            130542.77,
+            159751.869
+          ],
+          "median_p50_us": 52.042,
+          "median_p95_us": 97.042,
+          "median_p99_us": 141.333
+        },
+        "epoll": {
+          "complete": true,
+          "statuses": [
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok"
+          ],
+          "errors": 0,
+          "completed_requests": 960000,
+          "median_throughput": 131926.393,
+          "throughput_range": [
+            127494.622,
+            134680.78
+          ],
+          "median_p50_us": 464.083,
+          "median_p95_us": 504.084,
+          "median_p99_us": 934.208
+        }
+      },
+      "throughput_improvement_percent": -6.028229185159116,
+      "p95_latency_reduction_percent": -419.4493106077781
+    },
+    {
+      "clients": 256,
+      "runs": {
+        "baseline": {
+          "complete": true,
+          "statuses": [
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok"
+          ],
+          "errors": 0,
+          "completed_requests": 3840000,
+          "median_throughput": 141482.882,
+          "throughput_range": [
+            140792.184,
+            153371.224
+          ],
+          "median_p50_us": 53.5,
+          "median_p95_us": 79.917,
+          "median_p99_us": 113.709
+        },
+        "epoll": {
+          "complete": true,
+          "statuses": [
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok"
+          ],
+          "errors": 0,
+          "completed_requests": 3840000,
+          "median_throughput": 129787.973,
+          "throughput_range": [
+            126958.365,
+            131374.741
+          ],
+          "median_p50_us": 1961.375,
+          "median_p95_us": 2039.417,
+          "median_p99_us": 2364.668
+        }
+      },
+      "throughput_improvement_percent": -8.265953332785527,
+      "p95_latency_reduction_percent": -2451.9188658232915
+    }
+  ],
+  "idle_connections": [
+    {
+      "kind": "baseline",
+      "target_idle": 0,
+      "opened_idle": 0,
+      "status": "ok",
+      "ping_ms": 0.645,
+      "server_rss_kib": 2820,
+      "server_open_fds": 4,
+      "fd_soft_limit": 1048576,
+      "server_shutdown": "exit_0"
+    },
+    {
+      "kind": "epoll",
+      "target_idle": 0,
+      "opened_idle": 0,
+      "status": "ok",
+      "ping_ms": 0.462,
+      "server_rss_kib": 2816,
+      "server_open_fds": 5,
+      "fd_soft_limit": 1048576,
+      "server_shutdown": "exit_0"
+    },
+    {
+      "kind": "baseline",
+      "target_idle": 8,
+      "opened_idle": 8,
+      "status": "ping_timeout",
+      "ping_ms": null,
+      "server_rss_kib": 2820,
+      "server_open_fds": 12,
+      "fd_soft_limit": 1048576,
+      "server_shutdown": "exit_0"
+    },
+    {
+      "kind": "epoll",
+      "target_idle": 8,
+      "opened_idle": 8,
+      "status": "ok",
+      "ping_ms": 0.847,
+      "server_rss_kib": 2816,
+      "server_open_fds": 13,
+      "fd_soft_limit": 1048576,
+      "server_shutdown": "exit_0"
+    },
+    {
+      "kind": "baseline",
+      "target_idle": 64,
+      "opened_idle": 64,
+      "status": "ping_timeout",
+      "ping_ms": null,
+      "server_rss_kib": 2820,
+      "server_open_fds": 68,
+      "fd_soft_limit": 1048576,
+      "server_shutdown": "exit_0"
+    },
+    {
+      "kind": "epoll",
+      "target_idle": 64,
+      "opened_idle": 64,
+      "status": "ok",
+      "ping_ms": 0.685,
+      "server_rss_kib": 2804,
+      "server_open_fds": 69,
+      "fd_soft_limit": 1048576,
+      "server_shutdown": "exit_0"
+    },
+    {
+      "kind": "baseline",
+      "target_idle": 256,
+      "opened_idle": 256,
+      "status": "ping_timeout",
+      "ping_ms": null,
+      "server_rss_kib": 2812,
+      "server_open_fds": 260,
+      "fd_soft_limit": 1048576,
+      "server_shutdown": "exit_0"
+    },
+    {
+      "kind": "epoll",
+      "target_idle": 256,
+      "opened_idle": 256,
+      "status": "ok",
+      "ping_ms": 0.967,
+      "server_rss_kib": 2816,
+      "server_open_fds": 261,
+      "fd_soft_limit": 1048576,
+      "server_shutdown": "exit_0"
+    },
+    {
+      "kind": "baseline",
+      "target_idle": 1024,
+      "opened_idle": 573,
+      "status": "connect_timeout",
+      "ping_ms": null,
+      "server_rss_kib": null,
+      "server_open_fds": null,
+      "fd_soft_limit": 1048576,
+      "server_shutdown": "exit_0"
+    },
+    {
+      "kind": "epoll",
+      "target_idle": 1024,
+      "opened_idle": 1024,
+      "status": "ok",
+      "ping_ms": 0.586,
+      "server_rss_kib": 2816,
+      "server_open_fds": 1029,
+      "fd_soft_limit": 1048576,
+      "server_shutdown": "exit_0"
+    }
+  ]
+}
