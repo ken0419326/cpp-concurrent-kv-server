@@ -1,0 +1,56 @@
+{
+  "generated_at_utc": "2026-09-14T15:24:17.725548+00:00",
+  "os": "macOS-14.6-arm64-arm-64bit-Mach-O",
+  "cpu_model": "arm",
+  "logical_cpus_visible": 8,
+  "compiler": "Apple clang version 16.0.0 (clang-1600.0.26.3)",
+  "server_threads": 8,
+  "repetitions": 5,
+  "workload": "80% GET / 20% SET over persistent TCP connections on Linux loopback",
+  "summaries": [
+    {
+      "clients": 1,
+      "requests_per_run": 3000,
+      "median_throughput_ops_per_sec": 85397.602,
+      "min_throughput_ops_per_sec": 51224.514,
+      "max_throughput_ops_per_sec": 87202.755,
+      "median_p50_latency_us": 11.083,
+      "median_p95_latency_us": 12.875,
+      "median_p99_latency_us": 17.168,
+      "errors": 0
+    },
+    {
+      "clients": 4,
+      "requests_per_run": 12000,
+      "median_throughput_ops_per_sec": 265733.405,
+      "min_throughput_ops_per_sec": 221076.412,
+      "max_throughput_ops_per_sec": 282164.276,
+      "median_p50_latency_us": 13.0,
+      "median_p95_latency_us": 21.417,
+      "median_p99_latency_us": 37.668,
+      "errors": 0
+    },
+    {
+      "clients": 16,
+      "requests_per_run": 48000,
+      "median_throughput_ops_per_sec": 298391.559,
+      "min_throughput_ops_per_sec": 275052.586,
+      "max_throughput_ops_per_sec": 320696.981,
+      "median_p50_latency_us": 23.208,
+      "median_p95_latency_us": 30.875,
+      "median_p99_latency_us": 56.416,
+      "errors": 0
+    },
+    {
+      "clients": 64,
+      "requests_per_run": 192000,
+      "median_throughput_ops_per_sec": 322693.301,
+      "min_throughput_ops_per_sec": 298934.986,
+      "max_throughput_ops_per_sec": 324637.309,
+      "median_p50_latency_us": 22.75,
+      "median_p95_latency_us": 26.416,
+      "median_p99_latency_us": 36.917,
+      "errors": 0
+    }
+  ]
+}
